@@ -1,0 +1,237 @@
+/* Custom styles for product management */
+
+/* Table styling */
+.table {
+    font-size: 0.9rem;
+}
+
+.table th {
+    font-weight: 600;
+    border-bottom: 2px solid #dee2e6;
+    background-color: #f8f9fa;
+}
+
+.table td {
+    vertical-align: middle;
+    padding: 0.75rem;
+}
+
+.table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Button styling */
+.btn-group-sm > .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 0.2rem;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #212529;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+    border-color: #d39e00;
+}
+
+/* Card styling */
+.card {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    border: 1px solid #dee2e6;
+}
+
+/* Modal backdrop */
+.modal-backdrop {
+    z-index: 1050;
+}
+
+.modal {
+    z-index: 1055;
+}
+
+/* Image preview */
+.image-preview {
+    position: relative;
+    display: inline-block;
+}
+
+.image-preview img {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.image-preview .btn-danger {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    line-height: 1;
+    transform: translate(50%, -50%);
+}
+
+/* Loading overlay */
+.loading-overlay {
+    z-index: 9999;
+}
+
+/* Form styling */
+.form-control:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Badge styling */
+.badge {
+    font-size: 0.8em;
+}
+
+/* Loading spinner */
+.fa-spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Header styling */
+h4 {
+    font-weight: 600;
+    color: #495057;
+}
+
+/* Success button */
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+/* Action buttons spacing */
+.btn-group .btn + .btn {
+    margin-left: 0;
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+    .table-responsive {
+        font-size: 0.8rem;
+    }
+    
+    .btn-group-sm > .btn {
+        padding: 0.125rem 0.25rem;
+        font-size: 0.75rem;
+    }
+}
+
+/* Serial number column */
+.table td:first-child {
+    font-weight: 500;
+}
+
+/* Price column */
+.table td:nth-child(5) {
+    font-weight: 600;
+    color: #28a745;
+}
+
+/* Empty state */
+.text-muted {
+    color: #6c757d !important;
+}
+
+/* Search input */
+.input-group-text {
+    background-color: #e9ecef;
+    border-color: #ced4da;
+}
+
+/* Pagination */
+.pagination {
+    margin-bottom: 0;
+}
+
+.page-link {
+    color: #007bff;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+
+.page-link:hover {
+    color: #0056b3;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
+
+.page-item.active .page-link {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Table image styling */
+.table td img {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.table td img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* Image placeholder in table */
+.table td > div {
+    border: 1px dashed #dee2e6;
+    transition: all 0.2s ease;
+}
+
+.table td > div:hover {
+    background-color: #f8f9fa !important;
+}
+
+/* Ensure consistent row height */
+.table tbody tr {
+    height: 80px;
+}
+
+.table tbody td {
+    vertical-align: middle;
+    padding: 0.5rem;
+}
+
+/* Image column width */
+.table th:nth-child(2),
+.table td:nth-child(2) {
+    width: 80px;
+    min-width: 80px;
+}
+
+/* Quantity badge positioning */
+.badge {
+    white-space: nowrap;
+}
+
+/* Responsive image adjustments */
+@media (max-width: 768px) {
+    .table td img,
+    .table td > div {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .table th:nth-child(2),
+    .table td:nth-child(2) {
+        width: 50px;
+        min-width: 50px;
+    }
+}
