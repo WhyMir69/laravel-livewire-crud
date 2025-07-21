@@ -13,12 +13,28 @@
 <body class="bg-light">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="{{ route('welcome') }}">
                 <i class="fas fa-box"></i> Laravel Livewire CRUD
             </a>
-            <span class="navbar-text">
-                <i class="fas fa-images"></i> With Image Support
-            </span>
+            @auth
+                <div class="navbar-nav ms-auto">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user-circle"></i> {{ Auth::user()->name }}
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <form method="POST" action="{{ route('logout') }}" class="d-inline">
+                                    @csrf
+                                    <button type="submit" class="dropdown-item">
+                                        <i class="fas fa-sign-out-alt"></i> Logout
+                                    </button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            @endauth
         </div>
     </nav>
 
